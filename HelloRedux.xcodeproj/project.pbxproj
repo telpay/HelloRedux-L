@@ -14,6 +14,7 @@
 		2941A44A286C8DA300CD767D /* HelloReduxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2941A449286C8DA300CD767D /* HelloReduxTests.swift */; };
 		2941A454286C8DA300CD767D /* HelloReduxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2941A453286C8DA300CD767D /* HelloReduxUITests.swift */; };
 		2941A456286C8DA300CD767D /* HelloReduxUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2941A455286C8DA300CD767D /* HelloReduxUITestsLaunchTests.swift */; };
+		2941A464286CBAE000CD767D /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2941A463286CBAE000CD767D /* Store.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		2941A44F286C8DA300CD767D /* HelloReduxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloReduxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2941A453286C8DA300CD767D /* HelloReduxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloReduxUITests.swift; sourceTree = "<group>"; };
 		2941A455286C8DA300CD767D /* HelloReduxUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloReduxUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2941A463286CBAE000CD767D /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		2941A437286C8DA000CD767D /* HelloRedux */ = {
 			isa = PBXGroup;
 			children = (
+				2941A465286CBC2E00CD767D /* Shared */,
 				2941A438286C8DA000CD767D /* HelloReduxApp.swift */,
 				2941A43A286C8DA000CD767D /* ContentView.swift */,
 				2941A43C286C8DA300CD767D /* Assets.xcassets */,
@@ -125,6 +128,22 @@
 				2941A455286C8DA300CD767D /* HelloReduxUITestsLaunchTests.swift */,
 			);
 			path = HelloReduxUITests;
+			sourceTree = "<group>";
+		};
+		2941A462286CB79700CD767D /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				2941A463286CBAE000CD767D /* Store.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		2941A465286CBC2E00CD767D /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				2941A462286CB79700CD767D /* Store */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2941A464286CBAE000CD767D /* Store.swift in Sources */,
 				2941A43B286C8DA000CD767D /* ContentView.swift in Sources */,
 				2941A439286C8DA000CD767D /* HelloReduxApp.swift in Sources */,
 			);
