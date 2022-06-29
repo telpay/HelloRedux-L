@@ -14,12 +14,26 @@ struct State   {
 
 protocol Action {}
 
+struct IncrementAction: Action { }
+//struct IncrementActionAsync: Action {}
+struct DecrementAction: Action {}
+
 func reducer(_ state: State, _ action: Action) -> State {
+    
+    var state = state //key
+    
+    switch action {
+    case  _ as IncrementAction:
+        state.counter += 1
+    default:
+        break;
+        
+    }
     return state
 }
-class Store {
+class Store:ObservableObject{
     var reducer:Reducer
-    var state:State
+    @Published var state:State
     init(reducer: @escaping Reducer, state: State = State()  ) {
         self.reducer = reducer
         self.state = state
