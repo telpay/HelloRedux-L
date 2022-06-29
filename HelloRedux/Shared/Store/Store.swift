@@ -39,4 +39,9 @@ class Store:ObservableObject{
         self.state = state
             
         }
+    
+    func dispatch(action: Action) {
+    state = reducer(state,action)
+    }
+    
 }
