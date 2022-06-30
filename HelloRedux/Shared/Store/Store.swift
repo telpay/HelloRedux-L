@@ -31,9 +31,11 @@ func reducer(_ state: State, _ action: Action) -> State {
     }
     return state
 }
-class Store:ObservableObject{
+
+class Store :ObservableObject {
     var reducer:Reducer
-    @Published var state:State
+    @Published var state: State
+    
     init(reducer: @escaping Reducer, state: State = State()  ) {
         self.reducer = reducer
         self.state = state
