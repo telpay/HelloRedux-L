@@ -18,6 +18,10 @@ struct IncrementAction: Action { }
 //struct IncrementActionAsync: Action {}
 struct DecrementAction: Action {}
 
+struct AddAction: Action {
+    let value: Int
+}
+
 func reducer(_ state: State, _ action: Action) -> State {
     
     var state = state //key
@@ -27,6 +31,8 @@ func reducer(_ state: State, _ action: Action) -> State {
         state.counter += 1
     case _ as DecrementAction:
         state.counter -= 1
+    case let action as AddAction:
+        state.counter += action.value
     default:
         break;
         
